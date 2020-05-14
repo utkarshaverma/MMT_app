@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+    <title>NEW REGISTRATION FORM</title>
+
+    <style>
+        body {font-family: Arial, Helvetica, sans-serif;}
+        * {box-sizing: border-box;}
+        
+        h2 {background-color: cornsilk; align-self: center;}
+
+        .input-container {
+          display: -ms-flexbox; /* IE10 */
+          display: flex;
+          width: 100%;
+          margin-bottom: 15px;
+        }
+        
+        .icon {
+          padding: 10px;
+          background: dodgerblue;
+          color: white;
+          min-width: 50px;
+          text-align: center;
+        }
+        
+        .input-field {
+          width: 100%;
+          padding: 10px;
+          outline: none;
+        }
+        
+        .input-field:focus {
+          border: 2px solid dodgerblue;
+        }
+        
+        /* Set a style for the submit button */
+        .btn {
+          background-color: dodgerblue;
+          color: white;
+          padding: 15px 20px;
+          border: none;
+          cursor: pointer;
+          width: 100%;
+          opacity: 0.9;
+        }
+        
+        .btn:hover {
+          opacity: 1;
+        }
+        /*style for log in form*/
+body {font-family: Arial, Helvetica, sans-serif;}*{box-sizing: border-box;}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+/*Style end for log in form*/
+
+    
+        </style>
+
+</head>
+<body>
+<!-- Navigation Bar -->
+<div class="w3-bar w3-white w3-border-bottom w3-xlarge">
+  <a href="index.html" class="w3-bar-item w3-button w3-text-red w3-hover-red"><b><i class="fa fa-map-marker w3-margin-right"></i>Make My Trip</b></a>
+  <a onclick="openForm()" class="w3-bar-item w3-button w3-right w3-hover-red w3-text-grey">LOG IN</a>
+</div>
+<!-- LOG In FORM-->
+<div class="form-popup" id="myForm">
+  <form name="login" class="form-container">
+    <h1>Login</h1>
+
+    <label for="username"><b>Username</b></label>
+    <input type="text" placeholder="Enter Usernmae" name="username" required>
+
+    <label for="password"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" required>
+
+    <button type="submit" class="btn" onclick="validate(this.form)">Login</button>
+  
+    <button type="submit" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+<!-- Register form-->
+<div class="w3-display-container w3-content w3-hide-small" style="max-width:1500px">
+    <img class="w3-image" src="templates/london2.jpg" alt="London" width="1500">
+    <div class="w3-display-middle" style="width:65%">
+
+        <form action="" style="max-width:500px;margin:auto"></form>
+            <h2>Registration Form</h2>
+            <div class="input-container">
+            <i class="fa fa-user icon"></i>
+            <input class="input-field" type="" placeholder="Username" name="username" disabled>
+            </div>
+        
+            <div class="input-container">
+            <i class="fa fa-envelope icon"></i>
+            <input class="input-field" type="text" placeholder="Email" name="email" disabled>
+            </div>
+            
+            <div class="input-container">
+            <i class="fa fa-key icon"></i>
+            <input class="input-field" type="password" placeholder="Password" name="password" disabled>
+            </div>
+        
+            <button type="submit" class="btn" disabled>Register</button>
+            <br/> <br/>
+            <a href="index.html" class="w3-button btn cancel" >Close</a>
+      </form>
+
+
+    </div>
+</div>
+    <!-- Footer -->
+<footer class="w3-container w3-center w3-opacity w3-margin-bottom">
+  <h5>Find Us On</h5>
+  <div class="w3-xlarge w3-padding-16">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+
+<script>
+//log in form
+function openForm() {
+    document.getElementById("myForm").style.display = "block";
+  }
+  
+  function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+  }
+</script>
+<script type="text/javascript">
+    function validate(form){
+
+        var un = form.username.value;
+        var pw = form.password.value;
+        var valid = false;
+        var usernameArray = ["Utkarsha", "admin"];
+        var passwordArray = ["12345", "admin"];
+        for (var i = 0; i < usernameArray.length; i++){
+
+            if ((un == usernameArray[i]) && (pw == passwordArray[i]))
+            {
+                valid = true;
+                break;
+            }
+        }
+        if (valid)
+        {
+            if(alert("Login was successful"))
+            window.location = "index.html";
+            return false;
+        }
+        else{
+            if(alert("Incorrect password or username. Try again"))
+            window.location="register.html";
+            return false;
+
+        }
+		
+}
+
+	
+    
+</script>
+</body>
+</html>

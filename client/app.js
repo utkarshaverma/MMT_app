@@ -21,7 +21,5 @@ myApp.config(function($routeProvider){
 			templateUrl:'templates/show.html',
 			controller:'trainController'
 		});
-		
-	
-		
+				
 });

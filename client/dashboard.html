@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link href="style.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+    <title>Document</title>
+
+    <style>
+        .navbar{
+            margin: 0;
+            padding: 2;
+            overflow: hidden;
+            background-color: #333;
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+<div id="navbar" class="w3-bar w3-solid w3-white w3-xlarge">
+	<a href="index.html" class="w3-bar-item w3-button w3-text-red w3-hover-red"><b><i class="fa fa-map-marker w3-margin-right"></i>Make My Trip</b></a>
+	
+</div>
+    <div class="container">
+        <div class="row">
+            <div class="header clearfix">
+                <nav>
+                  <ul class="nav nav-pills pull-right">
+                    <li role="presentation" class="active"><a href="#/trains"><span class="glyphicon glyphicon-th-list"> </span> Trains List</a></li>
+                    <li role="presentation"><a href="#/trains/create"> 
+                    <span class="glyphicon glyphicon-plus"> </span>	Add New Train</a></li>
+                  </ul>
+                </nav>
+                <h3 class="text-muted">TRAIN DATABASE</h3>
+            </div>
+            <div ng-view>
+    
+            </div>
+            
+            <footer class="footer well well-sm">
+                <p>© 2020 MakeMyTrip</p>
+            </footer>
+    
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.min.js"></script>
+<script src="app.js"></script>
+<script src="controllers/controllers.js"></script>
+</body>
+</html>

@@ -32,17 +32,6 @@ app.get('/api/trains/:id', function(req, res){
 		res.json(train);
 	});
 });
-/*
-app.post('/api/trains', function(req, res){
-	Train.create(req.body, function(err, trains){
-		console.log("adding train deets");
-		console.log(req.body);
-		if(err)
-			res.send(err);
-		res.json(trains);
-	});
-});
-*/
 
 app.get('/api/trains/:id', function(req, res) {
 	console.log("in server book");
@@ -109,9 +98,6 @@ app.put('/api/trains/:id', function(req, res){
 		res.json(train);
 	});
 });
-
-
-
 
 app.listen(3000, function(){
 	console.log('server is running on port 3000..');
