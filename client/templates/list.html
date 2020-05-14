@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<body ng-controller="trainController" class="container" >
+		<br />
+		<div class="panel panel-default" ng-init="getTrains()">
+			<div class="panel-heading">
+			  <p class="panel-title"><span style="color:#5bc0de;" class="glyphicon glyphicon-list"> </span> Trains List</p>
+			</div>
+			<div class="panel-body">
+				<table class="table table-striped">
+					<thead>
+					<tr>
+					  <th>Train ID</th>
+					  <th>Name</th>
+					  <th>Destination</th>
+					  <th>Origin</th>
+					  <th>Departure</th>
+					  <th>Arrival</th>
+					  <th>Number of Seats</th>
+					  <th>Price</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr ng-repeat="train in trains">
+					  <td>{{ train._id }}</td>
+					  <td>{{ train.name }}</td>
+					  <td>{{ train.dest }}</td>
+					  <td>{{ train.origin }}</td>
+					  <td>{{ train.deptTime }}</td>
+					  <td>{{ train.arivTime }}</td>
+					  <td>{{ train.numOfSeats }}</td>
+					  <td>{{ train.price }}</td>
+					  <td> 
+						<a href="#/trains/{{train._id}}/show" class="btn btn-info"> Show  </a>
+						<a href="#/trains/{{train._id}}/edit" class="btn btn-success"><span class="glyphicon glyphicon-edit"> </span> Edit  </a>
+						<a ng-click="deleteTrains(train._id)" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> </span> Delete </a>
+						<a ng-click="bookTrains(train._id)" class="btn btn-info btn-green"><span class="glyphicon glyphicon-ok"> </span> Book </a>
+					  </td>
+					</tr>
+					</tbody>
+				</table>		
+			</div>
+		</div>
+	</body>
+</html>
+
+

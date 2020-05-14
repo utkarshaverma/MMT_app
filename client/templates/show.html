@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<body ng-controller="trainController" class="container" > <br/>
+		<div class="panel panel-default" ng-init="showTrains()">
+			<div class="panel-heading">
+			  <p class="panel-title"> Train Detail Information</p>
+			</div>
+			<div class="panel-body">
+				<form>
+				<div class="form-group">
+				 <label class="form-control">Train ID: <span style= "color: brown;">{{ trains._id }}</span></label>
+				 <label class="form-control">Name: <span style= "color: brown;">{{ trains.name }}</span></label>
+				 <label class="form-control">Destination: <span style= "color: brown;">{{ trains.dest }}</span></label>
+				 <label class="form-control">Origin: <span style= "color: brown;">{{ trains.origin }}</span></label>
+				 <label class="form-control">Departure Time: <span style= "color: brown;">{{ trains.deptTime }}</span></label>
+				 <label class="form-control">Arrival Time: <span style= "color: brown;">{{ trains.arivTime }}</span></label>
+				 <label class="form-control">Number of Seats: <span style= "color: brown;">{{ trains.numOfSeats }}</span></label>
+				 <label class="form-control">Cost of Ticket: <span style= "color: brown;">{{ trains.price }}</span></label>
+				<a href="#/trains" class="btn btn-default"> Cancel</a>
+				</div>
+			</form>		
+		</div>
+		</div>
+	
+	</body>
+</html>
+
+
+
+

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<body ng-controller="trainController" class="container" > <br/>
+
+<div class="panel panel-default" ng-init="showTrains()">
+	<div class="panel-heading">
+	  <p class="panel-title"><span style="color:#5bc0de;" 
+class="glyphicon glyphicon-edit"> </span> Edit Train</p>
+	</div>
+	<div class="panel-body">
+		<form ng-submit="updateTrains()">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" id="name" ng-model="train.name" value="train.name">
+    </div>
+    <div class="form-group">
+      <label for="dest">Destination:</label>
+      <input type="text" class="form-control" id="dept" ng-model="train.dest" value="train.dest">
+    </div>
+    <div class="form-group">
+      <label for="origin">Origin:</label>
+      <input type="text" class="form-control" id="origin" ng-model="train.origin" value="train.origin">
+    </div>
+    <div class="form-group">
+      <label for="deptTime">Departure Time:</label>
+      <input type="text" class="form-control" id="deptTime" ng-model="train.deptTime" value="train.deptTime">
+    </div>
+    <div class="form-group">
+      <label for="arivTime">Arrival Time:</label>
+      <input type="text" class="form-control" id="arivTime" ng-model="train.arivTime" value="train.arivTime">
+    </div>  
+    <div class="form-group">
+      <label for="numOfSeats">Number of Seats :</label>
+      <input type="text" class="form-control" id="numOfSeats" ng-model="train.numOfSeats" value="train.numOfSeats">
+    </div>  
+    <div class="form-group">
+      <label for="price">Cost :</label>
+      <input type="text" class="form-control" id="price" ng-model="train.price" value="train.price">
+    </div>
+    <button type="submit" style="color:#5bc0de;" class="btn btn-default">Update</button>
+    <a href="#/trains" class="btn btn-default"> Cancel</a>
+</form>		
+</div>
+</div>
+</body>
+</html>
