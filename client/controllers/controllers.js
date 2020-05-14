@@ -34,7 +34,7 @@ myApp.controller('trainController', function($scope,$route,$routeParams,$http){
 		$http.post('/api/trains/', $scope.train).then(function(response){
 			console.log("now in addTrains");
 			//$scope.trains = response.data;
-			window.location.href = '/';
+			window.location.href = '#/trains';
 		});
 	};
 	$scope.updateTrains = function(){
@@ -64,4 +64,54 @@ myApp.controller('trainController', function($scope,$route,$routeParams,$http){
 	};
 	
 	
+});
+
+
+myApp.controller('flightController', function($scope,$route,$routeParams,$http){
+	$scope.getFlights = function(){
+		console.log("now in getFlights");
+
+		$http.get('/api/flights/').then(function(response){
+			$scope.flights = response.data;
+		});
+	};
+	$scope.showFlights = function(){
+		console.log("now in showFlights");
+
+		var id = $routeParams.id;
+		$http.get('/api/flights/'+ id).then(function(response){
+			$scope.flights = response.data;
+		});
+	};
+	$scope.addFlights = function(){
+		console.log("now in addFlights");
+		$http.post('/api/flights/', $scope.flights).then(function(response){
+			console.log("now in addFlights");
+			window.location.href = '#/flights';
+		});
+	};
+	$scope.updateFlights = function(){
+		console.log("now in updateFlights");
+
+		var id = $routeParams.id;
+		$http.put('/api/flights/'+ id , $scope.flights ).then(function(response){
+			window.location.href = '/';
+		});
+	};
+	$scope.deleteFlights = function(id){
+		console.log("now in deleteFlights");
+
+		var id = id;
+		$http.delete('/api/flights/'+ id).then(function(response){
+			$route.reload();
+		});
+	};
+	$scope.bookFlights = function(id){
+		alert("Booking ticket");
+		var id = id;
+		$http.post('/api/flights/'+ id).then(function(response){
+			$route.reload();
+		});
+	};
+
 });

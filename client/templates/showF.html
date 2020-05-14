@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<body ng-controller="flightController" class="container" > <br/>
+		<div class="panel panel-default" ng-init="showFlights()">
+			<div class="panel-heading">
+			  <p class="panel-title"> Flight Detail Information</p>
+			</div>
+			<div class="panel-body">
+				<form>
+				<div class="form-group">
+				 <label class="form-control">Flight ID: <span style= "color: brown;">{{ flights._id }}</span></label>
+				 <label class="form-control">Name: <span style= "color: brown;">{{ flights.name }}</span></label>
+				 <label class="form-control">Destination: <span style= "color: brown;">{{ flights.dest }}</span></label>
+				 <label class="form-control">Origin: <span style= "color: brown;">{{ flights.origin }}</span></label>
+				 <label class="form-control">Departure Time: <span style= "color: brown;">{{ flights.deptTime }}</span></label>
+				 <label class="form-control">Arrival Time: <span style= "color: brown;">{{ flights.arivTime }}</span></label>
+				 <label class="form-control">Class: <span style= "color: brown;">{{ flights.class }}</span></label>
+				 <label class="form-control">Number of Seats: <span style= "color: brown;">{{ flights.numOfSeats }}</span></label>
+				 <label class="form-control">Cost of Ticket: <span style= "color: brown;">{{ flights.price }}</span></label>
+				<a href="#/flights" class="btn btn-default"> Cancel</a>
+				</div>
+			</form>		
+		</div>
+		</div>
+	
+	</body>
+</html>
+
+
+
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<body ng-controller="flightController" class="container" > <br/>
+
+<div class="panel panel-default" ng-init="showFlights()">
+	<div class="panel-heading">
+	  <p class="panel-title"><span style="color:#5bc0de;" 
+class="glyphicon glyphicon-edit"> </span> Edit Flight</p>
+	</div>
+	<div class="panel-body">
+		<form ng-submit="updateFlights()">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" id="name" ng-model="flight.name" value="flight.name">
+    </div>
+    <div class="form-group">
+      <label for="dest">Destination:</label>
+      <input type="text" class="form-control" id="dept" ng-model="flight.dest" value="flight.dest">
+    </div>
+    <div class="form-group">
+      <label for="origin">Origin:</label>
+      <input type="text" class="form-control" id="origin" ng-model="flight.origin" value="flight.origin">
+    </div>
+    <div class="form-group">
+      <label for="deptTime">Departure Time:</label>
+      <input type="text" class="form-control" id="deptTime" ng-model="flight.deptTime" value="flight.deptTime">
+    </div>
+    <div class="form-group">
+      <label for="arivTime">Arrival Time:</label>
+      <input type="text" class="form-control" id="arivTime" ng-model="flight.arivTime" value="flight.arivTime">
+    </div>  
+    <div class="form-group">
+      <label for="class">Class:</label>
+      <input type="text" class="form-control" id="class" ng-model="flight.class" value="flight.class">
+    </div>
+    <div class="form-group">
+      <label for="numOfSeats">Number of Seats :</label>
+      <input type="text" class="form-control" id="numOfSeats" ng-model="flight.numOfSeats" value="flight.numOfSeats">
+    </div>  
+    <div class="form-group">
+      <label for="price">Cost :</label>
+      <input type="text" class="form-control" id="price" ng-model="flight.price" value="flight.price">
+    </div>
+    <button type="submit" style="color:#5bc0de;" class="btn btn-default">Update</button>
+    <a href="#/flights" class="btn btn-default"> Cancel</a>
+</form>		
+</div>
+</div>
+</body>
+</html>
