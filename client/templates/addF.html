@@ -14,7 +14,7 @@
       </div>
       <div class="form-group">
         <label for="dest">Destination:</label>
-        <input type="text" class="form-control" id="dept" ng-model="flight.dest" value="flight.dest" required/>
+        <input type="text" class="form-control" id="dest" ng-model="flight.dest" value="flight.dest" required/>
       
       </div>
       <div class="form-group">
@@ -39,7 +39,7 @@
       </div>
       <div class="form-group">
         <label for="numOfSeats">Number of Seats :</label>
-        <input type="text" class="form-control" id="numOfSeats" ng-model="flight.numOfSeats" value="flight.numOfSeats" required/>
+        <input type="number" class="form-control" id="numOfSeats" ng-model="flight.numOfSeats" value="flight.numOfSeats" required/>
      
       </div> 
        
@@ -48,7 +48,7 @@
         <input type="text" class="form-control" id="price" ng-model="flight.price" value="flight.price" required/>
       
       </div>
-      <button type="submit" style="color:#5bc0de;" class="btn btn-default">Save</button>
+      <button ng-click="addFlights()" type="submit" style="color:#5bc0de;" class="btn btn-default">Save</button>
       <a href="#/flights" class="btn btn-default"> Cancel</a>
   </form>
 </div>

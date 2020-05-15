@@ -17,8 +17,6 @@ var Train = mongoose.model('Train', schema);
 //train db end
 
 //flight db
-var mongoose2 = require('mongoose');
-mongoose2.connect('mongodb://localhost/MMTDatabase_flight');
 var schema2 = new mongoose2.Schema({
 	name:String,
 	dest:String,
@@ -29,9 +27,10 @@ var schema2 = new mongoose2.Schema({
 	numOfSeats:Number,
 	price:String
 });
-var Flight = mongoose2.model('Flight', schema2);
-
+var Flight = mongoose.model('Flight', schema2);
 //flight db end
+
+
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/client'));
@@ -128,27 +127,7 @@ app.get('/api/flights/:id', function(req, res){
 		res.json(flight);
 	});
 });
-/*
-app.post('/api/flights', function(req, res){
-	var flight1 = new Flight({
-		name:req.body.name,
-		dest:req.body.dest,
-		origin:req.body.origin,
-		deptTime:req.body.deptTime,
-		arivTime:req.body.arivTime,
-		class:req.body.class,
-		numOfSeats:req.body.numOfSeats,
-		price:req.body.price
-	});
-	flight1.save(function(err, flights){
-		console.log("adding flight deets");
-		console.log(req.body);
-		if(err)
-			res.send(err);
-		res.json(flights);
-	});
-});
-*/
+
 
 app.post('/api/flights', function(req, res){
 	Flight.create(req.body, function(err, flights){

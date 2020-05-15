@@ -85,7 +85,7 @@ myApp.controller('flightController', function($scope,$route,$routeParams,$http){
 	};
 	$scope.addFlights = function(){
 		console.log("now in addFlights");
-		$http.post('/api/flights/', $scope.flights).then(function(response){
+		$http.post('/api/flights/', $scope.flight).then(function(response){
 			console.log("now in addFlights");
 			window.location.href = '#/flights';
 		});
@@ -95,7 +95,7 @@ myApp.controller('flightController', function($scope,$route,$routeParams,$http){
 
 		var id = $routeParams.id;
 		$http.put('/api/flights/'+ id , $scope.flights ).then(function(response){
-			window.location.href = '/';
+			window.location.href = '#/flights';
 		});
 	};
 	$scope.deleteFlights = function(id){
