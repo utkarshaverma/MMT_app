@@ -43,7 +43,7 @@ myApp.controller('trainController', function($scope,$route,$routeParams,$http){
 		var id = $routeParams.id;
 		$http.put('/api/trains/'+ id , $scope.train ).then(function(response){
 			//$scope.trains = response.data;
-			window.location.href = '/';
+			window.location.href = '#/trains';
 		});
 	};
 	$scope.deleteTrains = function(id){

@@ -10,36 +10,36 @@ class="glyphicon glyphicon-edit"> </span> Edit Flight</p>
 	<div class="panel-body">
 		<form ng-submit="updateFlights()">
     <div class="form-group">
-      <label for="name">Name:</label>
-      <input type="text" class="form-control" id="name" ng-model="flight.name" value="flight.name">
+      <label for="name">Name: <span style= "color: brown;">{{ flights.name }}</span></label> 
+      <input type="text" class="form-control" id="name" ng-model="flight.name" value="flight.name" required>
     </div>
     <div class="form-group">
-      <label for="dest">Destination:</label>
-      <input type="text" class="form-control" id="dept" ng-model="flight.dest" value="flight.dest">
+      <label for="dest">Destination: <span style= "color: brown;">{{ flights.dest }}</span></label>
+      <input type="text" class="form-control" id="dept" ng-model="flight.dest" value="flight.dest" required>
     </div>
     <div class="form-group">
-      <label for="origin">Origin:</label>
-      <input type="text" class="form-control" id="origin" ng-model="flight.origin" value="flight.origin">
+      <label for="origin">Origin: <span style= "color: brown;">{{ flights.origin }}</span></label>
+      <input type="text" class="form-control" id="origin" ng-model="flight.origin" value="flight.origin" required>
     </div>
     <div class="form-group">
-      <label for="deptTime">Departure Time:</label>
-      <input type="text" class="form-control" id="deptTime" ng-model="flight.deptTime" value="flight.deptTime">
+      <label for="deptTime">Departure Time: <span style= "color: brown;">{{ flights.deptTime }}</span></label>
+      <input type="text" class="form-control" id="deptTime" ng-model="flight.deptTime" value="flight.deptTime" required>
     </div>
     <div class="form-group">
-      <label for="arivTime">Arrival Time:</label>
-      <input type="text" class="form-control" id="arivTime" ng-model="flight.arivTime" value="flight.arivTime">
+      <label for="arivTime">Arrival Time: <span style= "color: brown;">{{ flights.arivTime }}</span></label>
+      <input type="text" class="form-control" id="arivTime" ng-model="flight.arivTime" value="flight.arivTime" required>
     </div>  
     <div class="form-group">
-      <label for="class">Class:</label>
-      <input type="text" class="form-control" id="class" ng-model="flight.class" value="flight.class">
+      <label for="class">Class:<span style= "color: brown;">{{ flights.class }}</span></label>
+      <input type="text" class="form-control" id="class" ng-model="flight.class" value="flight.class" required>
     </div>
     <div class="form-group">
-      <label for="numOfSeats">Number of Seats :</label>
-      <input type="text" class="form-control" id="numOfSeats" ng-model="flight.numOfSeats" value="flight.numOfSeats">
+      <label for="numOfSeats">Number of Seats :  <span style= "color: brown;">{{ flights.numOfSeats }}</span></label>
+      <input type="text" class="form-control" id="numOfSeats" ng-model="flight.numOfSeats" value="flight.numOfSeats" required>
     </div>  
     <div class="form-group">
-      <label for="price">Cost :</label>
-      <input type="text" class="form-control" id="price" ng-model="flight.price" value="flight.price">
+      <label for="price">Cost : <span style= "color: brown;">{{ flights.price }}</span></label>
+      <input type="text" class="form-control" id="price" ng-model="flight.price" value="flight.price" required>
     </div>
     <button type="submit" style="color:#5bc0de;" class="btn btn-default">Update</button>
     <a href="#/flights" class="btn btn-default"> Cancel</a>
